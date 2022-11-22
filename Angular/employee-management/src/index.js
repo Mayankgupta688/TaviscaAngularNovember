@@ -1,0 +1,1 @@
+alert("This is the Starting of Angular Application...")
