@@ -1,0 +1,10 @@
+<div class="card" style="width: 18rem; margin: 15px; display: inline-block" *ngFor="let employee of employeeDetailList">
+    <img [src]="employee.avatar" class="card-img-top" [title]="employee.name" alt="{{employee.name}}">
+    <div class="card-body">
+        <h5 class="card-title">{{employee.name}}</h5>
+        <h6 *ngIf="employee.id % 2 == 0">Employee Id is Even</h6>
+        <h6 *ngIf="employee.id % 2 == 1">Employee Id is Odd</h6>
+        <p>Employee Created On: {{employee.createdAt}}</p>
+        <a href="#" class="btn btn-primary">Delete</a>
+    </div>
+</div>
