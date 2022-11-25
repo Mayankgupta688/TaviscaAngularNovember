@@ -15,7 +15,7 @@ export class EmployeeListComponent {
   employeeImage = "https://st.depositphotos.com/1594308/4626/i/950/depositphotos_46262829-stock-photo-happy-employee.jpg";
 
   constructor(private _employeeService: EmployeeService) {
-    debugger;
+
     this._employeeService.getEmployeeData();
     this._employeeService.employeeEvent.subscribe((data) => {
       if (data == "employees_recieved") {
@@ -26,7 +26,6 @@ export class EmployeeListComponent {
   }
 
   deleteEmployee(event: any) {
-    debugger;
   }
 
   receiveEventData(event: any) {

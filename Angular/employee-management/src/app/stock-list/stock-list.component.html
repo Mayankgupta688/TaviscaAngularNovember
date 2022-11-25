@@ -1,0 +1,9 @@
+<div>
+    <label>Enter Stock Url:</label>
+    <input type="text" [(ngModel)]="stockUrl" />
+    <input type="button" value="Add Stock to Portfolio" (click)="addStockToPortfolio()" /><br /><br />
+
+    <div *ngFor="let stock of portfolioStocks" style="display: inline-block;">
+        <app-stock-details [stockUrl]="stock"></app-stock-details>
+    </div>
+</div>

@@ -11,10 +11,15 @@ import { EmployeeFooterComponent } from './employee-footer/employee-footer.compo
 import { EmployeeCountComponent } from './employee-count/employee-count.component';
 import { FilterEmployeesComponent } from './filter-employees/filter-employees.component';
 import { FormsModule } from "@angular/forms";
+import { UsingPipesComponent } from './using-pipes/using-pipes.component';
+import IncrementPipe from "./pipes/increment.pipe";
+import DelayDirective from "./directives/delay-directive";
+import { StockListComponent } from './stock-list/stock-list.component';
+import { StockDetailsComponent } from './stock-details/stock-details.component';
 
 @NgModule({
     imports: [BrowserModule, HttpClientModule, FormsModule],
-    declarations: [AppComponent, DataInterpolationComponent, EmployeeDetailsComponent, EmployeeListComponent, CurrentTimeComponent, EmployeeHeaderComponent, EmployeeFooterComponent, EmployeeCountComponent, FilterEmployeesComponent],
-    bootstrap: [EmployeeListComponent]
+    declarations: [DelayDirective, IncrementPipe, AppComponent, DataInterpolationComponent, EmployeeDetailsComponent, EmployeeListComponent, CurrentTimeComponent, EmployeeHeaderComponent, EmployeeFooterComponent, EmployeeCountComponent, FilterEmployeesComponent, UsingPipesComponent, StockListComponent, StockDetailsComponent],
+    bootstrap: [StockListComponent]
 })
 export default class AppModule { }

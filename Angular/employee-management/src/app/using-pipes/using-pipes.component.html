@@ -1,0 +1,18 @@
+<h1>User Salary: {{monthlySalary | increment : .5 : .25 | currency : 'INR'}} {{userName | lowercase}}</h1>
+<h2>Salary in Dollars: {{monthlySalary | currency : 'INR'}}</h2>
+
+<div *ngDelay="delayTime">
+    <b>This is Delayed Element for {{delayTime}}</b>
+</div>
+
+<div *ngDelay="'10000'">
+    <b>This is Delayed Element for {{delayTime}}</b>
+</div>
+
+<div *ngDelay="'15000'">
+    <b>This is Delayed Element for {{delayTime}}</b>
+</div>
+
+<div *ngDelay="'20000'">
+    <b>This is Delayed Element for {{delayTime}}</b>
+</div>
