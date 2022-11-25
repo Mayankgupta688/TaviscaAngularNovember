@@ -1,0 +1,23 @@
+<app-employee-header></app-employee-header>
+
+<div style="border: 1px solid red; height: 800px; padding: 10px; margin: 10px; overflow-y: auto;">
+
+    <app-filter-employees (notifyParent)="filterEmployee($event)"></app-filter-employees>
+
+    <app-employee-count [employeeCount]="filteredList.length" (invokeParentComponent)="receiveEventData($event)"></app-employee-count>
+
+    <div class="card" style="width: 18rem; margin: 15px; display: inline-block" *ngFor="let employee of filteredList">
+        <img [src]="employeeImage" class="card-img-top" [title]="employee.name" alt="{{employee.name}}">
+        <div class="card-body">
+            <h5 class="card-title">{{employee.name}}</h5>
+            <p>
+                <b>Employee Id: {{employee.id}}</b>
+                <label>Employee Created On: {{employee.createdAt}}</label><br />
+            </p>
+            <a href="#" class="btn btn-primary" (click)="deleteEmployee($event)">Delete</a>
+        </div>
+    </div>
+</div>
+
+
+<app-employee-footer></app-employee-footer>

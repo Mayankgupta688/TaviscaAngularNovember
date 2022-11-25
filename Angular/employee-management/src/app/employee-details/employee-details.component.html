@@ -3,7 +3,6 @@
     <div class="card-body">
         <h5 class="card-title">{{employee.name}}</h5>
         <h6 *ngIf="employee.id % 2 == 0">Employee Id is Even</h6>
-        <h6 *ngIf="employee.id % 2 == 1">Employee Id is Odd</h6>
         <p>Employee Created On: {{employee.createdAt}}</p>
         <a href="#" class="btn btn-primary">Delete</a>
     </div>
